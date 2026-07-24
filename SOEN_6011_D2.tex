@@ -81,26 +81,27 @@
   error/.style={rounded corners=3pt, draw=red!55!black, fill=red!7,
                 minimum width=2.45cm, minimum height=0.68cm,
                 align=center, font=\scriptsize\bfseries},
-  arrow/.style={-{Stealth[length=2.4mm]}, line width=0.9pt, draw=black!60}
+  arrow/.style={-{Stealth[length=2.4mm]}, line width=0.9pt,
+                draw=black!60, shorten <=2pt, shorten >=2pt}
 ]
   \node[box] (gui) at (0,0) {Tkinter interface};
-  \node[box] (validation) at (2.65,0) {Input validation};
-  \node[box] (beta) at (5.30,0) {\code{beta\_function}};
-  \node[box] (result) at (7.95,0) {Result + history};
+  \node[box] (validation) at (3.00,0) {Input validation};
+  \node[box] (beta) at (6.00,0) {\code{beta\_function}};
+  \node[box] (result) at (9.00,0) {Result + history};
 
-  \node[error] (errors) at (1.30,-1.45) {Helpful, recoverable\\exceptions};
-  \node[sub] (lgamma) at (4.25,-1.45) {\code{log\_gamma}\\recurrence + Stirling};
-  \node[sub] (exp) at (7.25,-1.45) {\code{exponential}\\range reduction + series};
-  \node[sub] (ln) at (4.25,-2.55) {\code{natural\_log}\\range reduction + series};
+  \node[error] (errors) at (2.65,-1.55) {Helpful, recoverable\\exceptions};
+  \node[sub] (lgamma) at (5.55,-1.55) {\code{log\_gamma}\\recurrence + Stirling};
+  \node[sub] (exp) at (8.35,-1.55) {\code{exponential}\\range reduction + series};
+  \node[sub] (ln) at (5.55,-2.75) {\code{natural\_log}\\range reduction + series};
 
   \draw[arrow] (gui) -- (validation);
   \draw[arrow] (validation) -- (beta);
   \draw[arrow] (beta) -- (result);
-  \draw[arrow] (beta) -- (lgamma);
+  \draw[arrow] (beta.south) -- (lgamma.north);
   \draw[arrow] (lgamma) -- (ln);
-  \draw[arrow] (beta) -- (exp);
-  \draw[arrow] (validation) -- (errors);
-  \draw[arrow] (errors.west) -| (gui.south);
+  \draw[arrow] (beta.south) -- (exp.north);
+  \draw[arrow] (validation.south) -- (errors.north);
+  \draw[arrow] (errors.west) to[out=180,in=-90] (gui.south);
 \end{tikzpicture}
 
 \vspace{0.25em}
