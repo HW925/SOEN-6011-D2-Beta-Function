@@ -20,8 +20,8 @@
   \vspace{0.8ex}%
 }
 
-\title{SOEN 6011 D2: F6 Beta Function}
-\subtitle{From-Scratch Numerical Core, Tkinter GUI, Version Control, and Updated Requirements}
+\title{SOEN 6011 Deliverable 2: F6 Beta Function}
+\subtitle{From-Scratch Numerical Core, Tkinter Graphical Interface, Version Control, and Updated Requirements}
 \author{Wei Huang}
 \institute{Concordia University}
 \date{Summer 2026}
@@ -35,24 +35,24 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{D2 Scope and Dependency Chain}
+\begin{frame}{Deliverable 2 Scope and Dependency Chain}
   \begin{columns}[T]
     \column{0.46\linewidth}
-    \begin{block}{D1 baseline}
+    \begin{block}{Deliverable 1 baseline}
       \begin{itemize}
         \item Log-gamma identity selected
-        \item Python TUI
+        \item Python textual user interface
         \item \code{math.lgamma} and \code{math.exp}
       \end{itemize}
     \end{block}
 
     \column{0.50\linewidth}
-    \begin{block}{D2 increment}
+    \begin{block}{Deliverable 2 increment}
       \begin{enumerate}
-        \item \textbf{P5:} implement mathematics from scratch
-        \item \textbf{P5:} replace TUI with Tkinter GUI
-        \item \textbf{P6:} publish Git repository + README
-        \item \textbf{P7:} revise requirements
+        \item \textbf{Problem 5:} implement mathematics from scratch
+        \item \textbf{Problem 5:} build a Tkinter graphical interface
+        \item \textbf{Problem 6:} publish Git repository + README
+        \item \textbf{Problem 7:} revise requirements
       \end{enumerate}
     \end{block}
   \end{columns}
@@ -64,11 +64,11 @@
   \end{block}
 
   \scriptsize
-  D2 revisits the D1 solution and adds new behavior, following an iterative and
-  incremental process. \smallcite{Kamthan, 2026b}
+  Deliverable 2 revisits the Deliverable 1 solution and adds new behavior,
+  following an iterative and incremental process. \smallcite{Kamthan, 2026b}
 \end{frame}
 
-\begin{frame}{P5: From-Scratch Architecture}
+\begin{frame}{Problem 5: From-Scratch Architecture}
 \centering
 \begin{tikzpicture}[
   node distance=0.65cm and 0.75cm,
@@ -83,7 +83,7 @@
                 align=center, font=\scriptsize\bfseries},
   arrow/.style={-{Stealth[length=2.4mm]}, line width=0.9pt, draw=black!60}
 ]
-  \node[box] (gui) at (0,0) {Tkinter GUI};
+  \node[box] (gui) at (0,0) {Tkinter interface};
   \node[box] (validation) at (2.65,0) {Input validation};
   \node[box] (beta) at (5.30,0) {\code{beta\_function}};
   \node[box] (result) at (7.95,0) {Result + history};
@@ -123,7 +123,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{P5: Numerical Method and Verification}
+\begin{frame}{Problem 5: Numerical Method and Verification}
   \begin{columns}[T]
     \column{0.48\linewidth}
     \begin{block}{Subordinate mathematics}
@@ -172,7 +172,7 @@
   \smallcite{NIST DLMF, 2026a; NIST DLMF, 2026b}
 \end{frame}
 
-\begin{frame}{P5: Tkinter GUI and Exception Recovery}
+\begin{frame}{Problem 5: Tkinter Interface and Exception Recovery}
   \begin{columns}[T,onlytextwidth]
     \column{0.49\linewidth}
     \centering
@@ -192,13 +192,13 @@
   \vspace{0.35em}
   \begin{block}{Implementation and recovery evidence}
     \scriptsize
-    \textbf{GUI implemented entirely with Tkinter widgets.}
+    \textbf{Graphical interface implemented entirely with Tkinter widgets.}
     Both screenshots show that handled errors preserve calculation history and
     leave the window ready for corrected input.
   \end{block}
 \end{frame}
 
-\begin{frame}{P6: Distributed Version Control Evidence}
+\begin{frame}{Problem 6: Distributed Version Control Evidence}
   \begin{columns}[T,onlytextwidth]
     \column{0.56\linewidth}
     \centering
@@ -210,7 +210,7 @@
       Purpose-focused commits separate:
       \begin{itemize}
         \item from-scratch numerical core
-        \item Tkinter GUI and recovery
+        \item Tkinter interface and recovery
         \item README and demonstration evidence
         \item presentation and repository publication
       \end{itemize}
@@ -229,7 +229,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{P6: README Documentation Evidence}
+\begin{frame}{Problem 6: README Documentation Evidence}
   \begin{columns}[T,onlytextwidth]
     \column{0.55\linewidth}
     \begin{block}{Scope and from-scratch boundary}
@@ -247,24 +247,24 @@
     \end{block}
 
     \vspace{-0.35em}
-    \begin{block}{Numerical design and repository URL}
+    \begin{block}{Numerical design and repository address}
       \centering
-      \includegraphics[height=1.75cm,trim=0 160 0 0,clip]
+      \includegraphics[height=1.68cm,trim=0 160 0 0,clip]
         {assets/readme_design_url.png}
     \end{block}
   \end{columns}
 \end{frame}
 
-\begin{frame}{P7: Updated Functional Requirements}
+\begin{frame}{Problem 7: Updated Functional Requirements}
   \scriptsize
-  \textbf{Legend:} FR = Functional Requirement. These replace the D1 TUI-focused
-  functional requirements.
+  \textbf{Legend:} FR denotes Functional Requirement. These replace the
+  Deliverable 1 textual-interface requirements.
 
   \vspace{0.35em}
-  \begin{block}{GUI interaction and calculation}
+  \begin{block}{Graphical-interface interaction and calculation}
     \footnotesize
-    \textbf{D2-FR-01} The system shall provide labeled GUI fields for \(x\) and
-    \(y\), plus Calculate, Swap, and Clear commands.\\[0.25em]
+    \textbf{D2-FR-01} The system shall provide labeled graphical fields for
+    \(x\) and \(y\), plus Calculate, Swap, and Clear commands.\\[0.25em]
     \textbf{D2-FR-02} The system shall accept finite positive real inputs in
     decimal or scientific notation.\\[0.25em]
     \textbf{D2-FR-03} The system shall compute \(B(x,y)\) through the
@@ -280,21 +280,22 @@
 
   \begin{block}{Why requirements changed}
     \scriptsize
-    D1's terminal prompts and quit command were replaced by GUI controls,
-    persistent history, and recovery behavior required by P5.
+    Deliverable 1's terminal prompts and quit command were replaced by graphical
+    controls, persistent history, and recovery behavior required by Problem 5.
   \end{block}
 \end{frame}
 
-\begin{frame}{P7: Updated Constraints and Quality Requirements}
+\begin{frame}{Problem 7: Constraints and Quality Requirements}
   \begin{columns}[T]
     \column{0.49\linewidth}
     \begin{block}{Constraints}
       \scriptsize
-      \textbf{D2-CR-01} The GUI shall use Tkinter.\\[0.25em]
+      \textbf{D2-CR-01} The graphical interface shall use Tkinter.\\[0.25em]
       \textbf{D2-CR-02} The numerical core shall not call built-in or library
       mathematical functions.\\[0.25em]
       \textbf{D2-CR-03} The application shall run from a terminal with
-      \code{python3 beta\_function\_gui.py}, independent of an IDE.\\[0.25em]
+      \code{python3 beta\_function\_gui.py}, independent of an integrated
+      development environment.\\[0.25em]
       \textbf{D2-CR-04} Each handled input error shall name the field and the
       correction needed.
     \end{block}
@@ -307,28 +308,29 @@
       within the same tolerance.\\[0.25em]
       \textbf{D2-QR-02} For \(0<x,y\le1000\) with a representable result, the
       calculation shall complete within 100 ms on the demonstration computer.\\[0.25em]
-      \textbf{D2-QR-03} After a handled error, the GUI shall remain open and
-      ready for corrected input.
+      \textbf{D2-QR-03} After a handled error, the graphical interface shall
+      remain open and ready for corrected input.
     \end{block}
   \end{columns}
 
   \vspace{0.35em}
   \scriptsize
-  Traceability: P5 architecture satisfies D2-CR-01--04; the verification table
-  supports D2-QR-01; GUI recovery supports D2-FR-06 and D2-QR-03.
+  Traceability: Problem 5 architecture satisfies D2-CR-01--04; the verification
+  table supports D2-QR-01; graphical-interface recovery supports D2-FR-06 and
+  D2-QR-03.
   \smallcite{ISO/IEC/IEEE, 2018; Kamthan, 2026a}
 \end{frame}
 
-\begin{frame}{GAI Use: CASTROFF Evidence for P5--P7}
+\begin{frame}{Generative AI Use: CASTROFF Evidence for Problems 5--7}
   \scriptsize
   \begin{columns}[T]
     \column{0.42\linewidth}
     \begin{block}{Tool and CASTROFF}
       \textbf{Tool:} OpenAI ChatGPT/Codex.\\
-      \textbf{Context:} SOEN 6011 D2, F6.\\
+      \textbf{Context:} SOEN 6011 Deliverable 2, F6.\\
       \textbf{Audience:} TA and instructor.\\
       \textbf{Style:} concise, evidence-based.\\
-      \textbf{Task:} implement and document P5--P7.\\
+      \textbf{Task:} implement and document Problems 5--7.\\
       \textbf{Role:} software engineering student.\\
       \textbf{Output:} Python, README, requirements, slides.\\
       \textbf{Format:} runnable files and LaTeX.\\
@@ -337,17 +339,17 @@
 
     \column{0.54\linewidth}
     \begin{block}{Prompt examples and decisions}
-      \textbf{P5 prompt:} ``Design Beta from scratch without mathematical
+      \textbf{Problem 5 prompt:} ``Design Beta from scratch without mathematical
       libraries, including subordinate functions and exceptions.''\\
       \textbf{Revision:} chose recurrence + Stirling, added range checks, and
       rejected direct Gamma multiplication.\\[0.45em]
-      \textbf{P6 prompt:} ``Propose purpose-focused commits and a minimal
-      README for this scientific GUI.''\\
+      \textbf{Problem 6 prompt:} ``Propose purpose-focused commits and a minimal
+      README for this scientific graphical interface.''\\
       \textbf{Accepted after check:} the purpose-focused commit structure
       matches the actual repository history; README commands were executed
       locally.\\[0.45em]
-      \textbf{P7 prompt:} ``Revise D1 shall-statements for the D2 GUI and
-      from-scratch constraint.''\\
+      \textbf{Problem 7 prompt:} ``Revise Deliverable 1 shall-statements for the
+      Deliverable 2 graphical interface and from-scratch constraint.''\\
       \textbf{Revision:} separated functional, constraint, accuracy, timing,
       and recovery requirements.
     \end{block}
