@@ -66,14 +66,19 @@ inputs, recovery, and repeated calculations.
 
 ## Slide 6 - Distributed version control
 
-For Problem 6, four purpose-focused commits separate the numerical core, GUI
-and recovery, documentation, and repository evidence.
+For Problem 6, the public GitHub history uses purpose-focused commits. They
+separate the numerical core, GUI and recovery, documentation, presentation,
+and repository publication.
 
-The README explains the function, terminal command, from-scratch boundary,
-demo cases, and numerical limits. This is lightweight documentation consistent
-with the course notes. The submitted version shows the public repository URL.
+## Slide 7 - README documentation
 
-## Slide 7 - Updated functional requirements
+The README documents the function and D2 scope, the from-scratch subordinate
+operations, and the Tkinter interface. It also gives an IDE-independent terminal
+command, reproducible demo cases, the numerical design and floating-point limit,
+and the public repository URL. This is lightweight documentation consistent
+with the course notes.
+
+## Slide 8 - Updated functional requirements
 
 Problem 7 updates the D1 requirements to match the actual D2 system. The
 functional requirements now specify labeled GUI controls, finite positive real
@@ -84,7 +89,7 @@ history, and the ability to continue after either a result or a handled error.
 Terminal prompts and a quit command are replaced by GUI controls, history, and
 explicit recovery.
 
-## Slide 8 - Constraints and quality requirements
+## Slide 9 - Constraints and quality requirements
 
 The constraints make the implementation boundary testable: the GUI shall use
 Tkinter, the core shall not call built-in or library mathematical functions,
@@ -96,7 +101,7 @@ relative tolerance of ten to the minus ten. Representable results in the stated
 domain must complete within one hundred milliseconds, and the GUI must remain
 usable after an error.
 
-## Slide 9 - GAI use
+## Slide 10 - GAI use
 
 I used OpenAI ChatGPT and Codex and documented the work with CASTROFF. The
 context was D2 for F6, the audience was the instructor and TA, and the role was
@@ -110,7 +115,7 @@ commands. For P7, I revised the output by separating functional, constraint,
 accuracy, timing, and recovery requirements. All numerical claims were verified
 by execution and trusted identities rather than accepted directly from the AI.
 
-## Slide 10 - References
+## Slide 11 - References
 
 These are the project, course, mathematical, and requirements references.
 
