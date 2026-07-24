@@ -59,7 +59,8 @@ when the final result cannot be represented as a nonzero finite float.
 
 ## Repository
 
-Public repository URL: pending publication.
+Public repository URL:
+https://github.com/HW925/SOEN-6011-D2-Beta-Function
 
 ## Author
 
