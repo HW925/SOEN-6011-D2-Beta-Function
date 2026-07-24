@@ -176,13 +176,15 @@
   \begin{columns}[T,onlytextwidth]
     \column{0.49\linewidth}
     \centering
-    \includegraphics[height=3.90cm]{assets/tkinter_gui_domain.png}\\[-0.15em]
+    \includegraphics[width=\linewidth,trim=0 20 0 55,clip]
+      {assets/tkinter_gui_domain.png}\\[-0.15em]
     \scriptsize
     \textbf{Domain error:} names \(x\) and states the \(x>0\) correction.
 
     \column{0.49\linewidth}
     \centering
-    \includegraphics[height=3.90cm]{assets/tkinter_gui_nonnumeric.png}\\[-0.15em]
+    \includegraphics[width=\linewidth,trim=0 20 0 55,clip]
+      {assets/tkinter_gui_nonnumeric.png}\\[-0.15em]
     \scriptsize
     \textbf{Nonnumeric error:} names \(x\) and provides valid examples.
   \end{columns}
@@ -215,8 +217,10 @@
     \end{block}
 
     \begin{alertblock}{Public repository}
-      \scriptsize
-      \url{https://github.com/HW925/SOEN-6011-D2-Beta-Function}
+      \centering
+      \href{https://github.com/HW925/SOEN-6011-D2-Beta-Function}{%
+        \resizebox{0.98\linewidth}{!}{%
+          \texttt{https://github.com/HW925/SOEN-6011-D2-Beta-Function}}}
     \end{alertblock}
 
     \scriptsize
@@ -339,8 +343,9 @@
       rejected direct Gamma multiplication.\\[0.45em]
       \textbf{P6 prompt:} ``Propose purpose-focused commits and a minimal
       README for this scientific GUI.''\\
-      \textbf{Accepted after check:} four commits match actual repository
-      changes; README commands were executed locally.\\[0.45em]
+      \textbf{Accepted after check:} the purpose-focused commit structure
+      matches the actual repository history; README commands were executed
+      locally.\\[0.45em]
       \textbf{P7 prompt:} ``Revise D1 shall-statements for the D2 GUI and
       from-scratch constraint.''\\
       \textbf{Revision:} separated functional, constraint, accuracy, timing,
