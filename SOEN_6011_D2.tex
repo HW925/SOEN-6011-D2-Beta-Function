@@ -204,46 +204,52 @@
 \end{frame}
 
 \begin{frame}[t]{Problem 6: Distributed Version Control Evidence}
+  \vspace{0.2em}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.49\linewidth}
+    \centering
+    \begin{minipage}[t][3.85cm][t]{\linewidth}
+      \vspace{0pt}
+      \centering
+      \includegraphics[width=\linewidth,height=3.65cm,keepaspectratio]
+        {assets/commit_history.png}
+    \end{minipage}\\[-0.15em]
+    \scriptsize\textbf{Recent refinement and publication commits}
+
+    \column{0.49\linewidth}
+    \centering
+    \begin{minipage}[t][3.85cm][t]{\linewidth}
+      \vspace{0pt}
+      \centering
+      \includegraphics[width=\linewidth,height=3.65cm,keepaspectratio]
+        {assets/commit_history_earlier.png}
+    \end{minipage}
+    \\[-0.15em]
+    \scriptsize\textbf{Core, interface, documentation, and evidence commits}
+  \end{columns}
+
   \vspace{0.25em}
   \begin{columns}[T,onlytextwidth]
-    \column{0.54\linewidth}
-    \centering
-    \includegraphics[height=5.65cm]{assets/commit_history.png}
+    \column{0.61\linewidth}
+    \begin{block}{What the history demonstrates}
+      \scriptsize
+      Purpose-focused commits separate the numerical core, Tkinter recovery,
+      documentation, evidence, and final delivery. Commit logs make each
+      increment explicit. \smallcite{Kamthan, 2026c}
+    \end{block}
 
-    \column{0.43\linewidth}
-    \hspace{-0.5cm}
-    \begin{minipage}[t]{\linewidth}
-      \begin{block}{What the history demonstrates}
-        \scriptsize
-        Each commit records one meaningful increment:
-        \begin{itemize}
-          \item \textbf{Core:} from-scratch mathematics
-          \item \textbf{Interface:} Tkinter and recovery
-          \item \textbf{Evidence:} README and demonstrations
-          \item \textbf{Delivery:} presentation and publication
-        \end{itemize}
-      \end{block}
-
-      \begin{alertblock}{Public repository}
-        \centering
-        \href{https://github.com/HW925/SOEN-6011-D2-Beta-Function}{%
-          \textbf{GitHub Repository}}\\[0.25em]
-        \tiny
-        \texttt{github.com/HW925/SOEN-6011-D2-Beta-Function}
-      \end{alertblock}
-
-      \vspace{0.2em}
-      \begin{beamercolorbox}[wd=\linewidth,sep=0.7em]{block body}
-        \scriptsize
-        Commit logs make implementation decisions and increments explicit.
-        \smallcite{Kamthan, 2026c}
-      \end{beamercolorbox}
-    \end{minipage}
+    \column{0.36\linewidth}
+    \begin{alertblock}{Public repository}
+      \centering
+      \href{https://github.com/HW925/SOEN-6011-D2-Beta-Function}{%
+        \textbf{GitHub Repository}}\\[0.2em]
+      \tiny
+      \texttt{github.com/HW925/SOEN-6011-D2-Beta-Function}
+    \end{alertblock}
   \end{columns}
 \end{frame}
 
-\begin{frame}[t]
-  \frametitle{Problem 6: README Evidence}
+\begin{frame}[t]{Problem 6 -- README Evidence}
   \vspace{0.45em}
   \begin{columns}[T,onlytextwidth]
     \column{0.32\linewidth}
@@ -277,7 +283,7 @@
     \begin{minipage}[t][3.85cm][t]{\linewidth}
       \vspace{0pt}
       \centering
-      \includegraphics[width=\linewidth,trim=0 120 0 0,clip]
+      \includegraphics[width=\linewidth,trim=0 260 0 0,clip]
         {assets/readme_design_url.png}
     \end{minipage}
     \scriptsize
