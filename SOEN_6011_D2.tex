@@ -240,38 +240,49 @@
 \end{frame}
 
 \begin{frame}[t]{Problem 6: README Evidence}
-  \vspace{0.2em}
+  \vspace{0.45em}
   \begin{columns}[T,onlytextwidth]
-    \column{0.56\linewidth}
-    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
-      {block title}
-      \small Scope and from-scratch boundary
-    \end{beamercolorbox}
-    \vspace{0.15em}
+    \column{0.32\linewidth}
     \centering
-    \includegraphics[height=4.05cm]{assets/readme_scope.png}\\[0.25em]
+    \textbf{\large Scope and boundary}\\[-0.15em]
+    {\color{structure.fg}\rule{\linewidth}{1.2pt}}
+    \begin{minipage}[c][3.85cm][c]{\linewidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/readme_scope.png}
+    \end{minipage}
     \scriptsize
-    The README states the subordinate functions, Tkinter boundary, handled
-    cases, and permitted input/output operations.
+    From-scratch functions, permitted operations, Tkinter, and handled cases.
 
-    \column{0.41\linewidth}
-    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
-      {block title}
-      \small Run command and demo checks
-    \end{beamercolorbox}
-    \vspace{0.15em}
+    \column{0.32\linewidth}
     \centering
-    \includegraphics[height=2.55cm]{assets/readme_run_demo.png}
+    \textbf{\large Run and verify}\\[-0.15em]
+    {\color{structure.fg}\rule{\linewidth}{1.2pt}}
+    \begin{minipage}[c][3.85cm][c]{\linewidth}
+      \centering
+      \includegraphics[width=0.92\linewidth]{assets/readme_run_demo.png}
+    \end{minipage}
+    \scriptsize
+    Terminal command and reproducible demonstration checks.
 
-    \vspace{0.35em}
-    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
-      {block title}
-      \small Numerical design and repository
-    \end{beamercolorbox}
-    \vspace{0.15em}
-    \includegraphics[height=1.75cm,trim=0 160 0 0,clip]
-      {assets/readme_design_url.png}
+    \column{0.32\linewidth}
+    \centering
+    \textbf{\large Design and repository}\\[-0.15em]
+    {\color{structure.fg}\rule{\linewidth}{1.2pt}}
+    \begin{minipage}[c][3.85cm][c]{\linewidth}
+      \centering
+      \includegraphics[width=\linewidth,trim=0 120 0 0,clip]
+        {assets/readme_design_url.png}
+    \end{minipage}
+    \scriptsize
+    Numerical method, floating-point limits, and public repository.
   \end{columns}
+
+  \vspace{0.45em}
+  \begin{beamercolorbox}[wd=\linewidth,sep=0.65em,center]{block body}
+    \small
+    The README connects implementation scope, reproducible use, numerical
+    design, and repository access.
+  \end{beamercolorbox}
 \end{frame}
 
 \begin{frame}{Problem 7: Updated Functional Requirements}
