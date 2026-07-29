@@ -203,60 +203,74 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Problem 6: Distributed Version Control Evidence}
+\begin{frame}[t]{Problem 6: Distributed Version Control Evidence}
+  \vspace{0.25em}
   \begin{columns}[T,onlytextwidth]
-    \column{0.56\linewidth}
+    \column{0.54\linewidth}
     \centering
-    \includegraphics[height=5.45cm]{assets/commit_history.png}
+    \includegraphics[height=5.65cm]{assets/commit_history.png}
 
-    \column{0.41\linewidth}
-    \begin{block}{High-quality history}
+    \column{0.43\linewidth}
+    \begin{block}{What the history demonstrates}
       \scriptsize
-      Purpose-focused commits separate:
+      Each commit records one meaningful increment:
       \begin{itemize}
-        \item from-scratch numerical core
-        \item Tkinter interface and recovery
-        \item README and demonstration evidence
-        \item presentation and repository publication
+        \item \textbf{Core:} from-scratch mathematics
+        \item \textbf{Interface:} Tkinter and recovery
+        \item \textbf{Evidence:} README and demonstrations
+        \item \textbf{Delivery:} presentation and publication
       \end{itemize}
     \end{block}
 
     \begin{alertblock}{Public repository}
       \centering
       \href{https://github.com/HW925/SOEN-6011-D2-Beta-Function}{%
-        \resizebox{0.98\linewidth}{!}{%
-          \texttt{https://github.com/HW925/SOEN-6011-D2-Beta-Function}}}
+        \textbf{GitHub Repository}}\\[0.25em]
+      \tiny
+      \texttt{github.com/HW925/SOEN-6011-D2-Beta-Function}
     \end{alertblock}
 
-    \scriptsize
-    Commit logs make implementation decisions and increments explicit.
-    \smallcite{Kamthan, 2026c}
+    \vspace{0.2em}
+    \begin{beamercolorbox}[wd=\linewidth,sep=0.7em]{block body}
+      \scriptsize
+      Commit logs make implementation decisions and increments explicit.
+      \smallcite{Kamthan, 2026c}
+    \end{beamercolorbox}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Problem 6: README Documentation Evidence}
+\begin{frame}[t]{Problem 6: README Evidence}
+  \vspace{0.2em}
   \begin{columns}[T,onlytextwidth]
-    \column{0.55\linewidth}
-    \begin{block}{Scope and from-scratch boundary}
-      \centering
-      \includegraphics[height=3.70cm]{assets/readme_scope.png}\\[0.2em]
-      \scriptsize
-      Subordinate functions, Tkinter, handled cases, and allowed input/output
-      operations are stated explicitly.
-    \end{block}
+    \column{0.56\linewidth}
+    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
+      {block title}
+      \small Scope and from-scratch boundary
+    \end{beamercolorbox}
+    \vspace{0.15em}
+    \centering
+    \includegraphics[height=4.05cm]{assets/readme_scope.png}\\[0.25em]
+    \scriptsize
+    The README states the subordinate functions, Tkinter boundary, handled
+    cases, and permitted input/output operations.
 
-    \column{0.42\linewidth}
-    \begin{block}{Run command and demo checks}
-      \centering
-      \includegraphics[height=2.85cm]{assets/readme_run_demo.png}
-    \end{block}
+    \column{0.41\linewidth}
+    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
+      {block title}
+      \small Run command and demo checks
+    \end{beamercolorbox}
+    \vspace{0.15em}
+    \centering
+    \includegraphics[height=2.55cm]{assets/readme_run_demo.png}
 
-    \vspace{-0.35em}
-    \begin{block}{Numerical design and repository address}
-      \centering
-      \includegraphics[height=1.68cm,trim=0 160 0 0,clip]
-        {assets/readme_design_url.png}
-    \end{block}
+    \vspace{0.35em}
+    \begin{beamercolorbox}[wd=\linewidth,ht=2.6ex,dp=0.8ex,leftskip=0.7em]
+      {block title}
+      \small Numerical design and repository
+    \end{beamercolorbox}
+    \vspace{0.15em}
+    \includegraphics[height=1.75cm,trim=0 160 0 0,clip]
+      {assets/readme_design_url.png}
   \end{columns}
 \end{frame}
 
@@ -329,37 +343,66 @@
   \smallcite{ISO/IEC/IEEE, 2018; Kamthan, 2026a}
 \end{frame}
 
-\begin{frame}{Generative AI Use: CASTROFF Evidence for Problems 5--7}
-  \scriptsize
-  \begin{columns}[T]
-    \column{0.42\linewidth}
-    \begin{block}{Tool and CASTROFF}
-      \textbf{Tool:} OpenAI ChatGPT/Codex.\\
-      \textbf{Context:} SOEN 6011 Deliverable 2, F6.\\
-      \textbf{Audience:} TA and instructor.\\
-      \textbf{Style:} concise, evidence-based.\\
-      \textbf{Task:} implement and document Problems 5--7.\\
-      \textbf{Role:} software engineering student.\\
-      \textbf{Output:} Python, README, requirements, slides.\\
-      \textbf{Format:} runnable files and LaTeX.\\
-      \textbf{Feedback:} verify mathematically and by execution.
+\begin{frame}[t]{Generative Artificial Intelligence: CASTROFF Evidence}
+  \vspace{0.2em}
+  \begin{block}{Tool and prompt structure}
+    \scriptsize
+    \begin{columns}[T,onlytextwidth]
+      \column{0.31\linewidth}
+      \textbf{Tool:} OpenAI ChatGPT/Codex\\
+      \textbf{Context:} Deliverable 2, F6\\
+      \textbf{Audience:} TA and instructor
+
+      \column{0.31\linewidth}
+      \textbf{Style:} concise, evidence-based\\
+      \textbf{Task:} Problems 5--7\\
+      \textbf{Role:} software engineering student
+
+      \column{0.34\linewidth}
+      \textbf{Output:} code, README, requirements, slides\\
+      \textbf{Format:} runnable files and LaTeX\\
+      \textbf{Feedback:} verify by mathematics and execution
+    \end{columns}
+  \end{block}
+
+  \vspace{0.25em}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.32\linewidth}
+    \begin{block}{Problem 5}
+      \scriptsize
+      \textbf{Prompt}\\
+      Design Beta from scratch, including subordinate functions and exceptions.
+
+      \vspace{0.35em}
+      \textbf{Decision}\\
+      Used recurrence and Stirling; added range checks; rejected direct Gamma
+      multiplication.
     \end{block}
 
-    \column{0.54\linewidth}
-    \begin{block}{Prompt examples and decisions}
-      \textbf{Problem 5 prompt:} ``Design Beta from scratch without mathematical
-      libraries, including subordinate functions and exceptions.''\\
-      \textbf{Revision:} chose recurrence + Stirling, added range checks, and
-      rejected direct Gamma multiplication.\\[0.45em]
-      \textbf{Problem 6 prompt:} ``Propose purpose-focused commits and a minimal
-      README for this scientific graphical interface.''\\
-      \textbf{Accepted after check:} the purpose-focused commit structure
-      matches the actual repository history; README commands were executed
-      locally.\\[0.45em]
-      \textbf{Problem 7 prompt:} ``Revise Deliverable 1 shall-statements for the
-      Deliverable 2 graphical interface and from-scratch constraint.''\\
-      \textbf{Revision:} separated functional, constraint, accuracy, timing,
-      and recovery requirements.
+    \column{0.32\linewidth}
+    \begin{block}{Problem 6}
+      \scriptsize
+      \textbf{Prompt}\\
+      Propose purpose-focused commits and a minimal README for the graphical
+      interface.
+
+      \vspace{0.35em}
+      \textbf{Decision}\\
+      Accepted after checking repository history and executing README commands
+      locally.
+    \end{block}
+
+    \column{0.32\linewidth}
+    \begin{block}{Problem 7}
+      \scriptsize
+      \textbf{Prompt}\\
+      Revise Deliverable 1 requirements for the graphical interface and
+      from-scratch constraint.
+
+      \vspace{0.35em}
+      \textbf{Decision}\\
+      Separated functional, constraint, accuracy, timing, range, and recovery
+      requirements.
     \end{block}
   \end{columns}
 \end{frame}
