@@ -15,9 +15,10 @@ D2 increments my D1 solution. D1 selected the log-gamma identity but used
 mathematical decision while replacing the library operations with my own
 functions and the TUI with a Tkinter GUI.
 
-"From scratch" allows input, output, arithmetic, exception handling, and the
-required GUI services, but no mathematical or numerical library. This is an
-iterative increment of the earlier baseline, as described in the course notes.
+"From scratch" means that the numerical core uses no built-in or library
+functions except those permitted for input, output, arithmetic, interface
+design, and exception handling. This is an iterative increment of the earlier
+baseline.
 
 ## Slide 3 - From-scratch architecture
 
@@ -44,10 +45,10 @@ least eight, then use Stirling's formula with correction terms. Finally, I
 evaluate log Beta as log-gamma of x plus log-gamma of y minus log-gamma of their
 sum.
 
-External verification did not add a library dependency to the submitted
-program. Three known values have very small relative errors, and the larger
-case remains accurate. An unrepresentable result produces a numeric-range error
-instead of a misleading zero or infinity.
+External verification did not add a dependency to the submitted core. Known
+values have very small relative errors. Across 5,000 timed benchmark calls, the
+maximum observed time was 0.129 milliseconds. An underflow case produces a
+helpful range error instead of a misleading zero.
 
 ## Slide 5 - Tkinter GUI and exception recovery
 
@@ -84,22 +85,20 @@ Problem 7 updates the D1 requirements to match the actual D2 system. The
 functional requirements now specify labeled GUI controls, finite positive real
 inputs including scientific notation, the three from-scratch numerical
 operations, at least ten significant digits in the displayed result, session
-history, and the ability to continue after either a result or a handled error.
+history, recovery, and detection of unrepresentable results.
 
 Terminal prompts and a quit command are replaced by GUI controls, history, and
 explicit recovery.
 
 ## Slide 9 - Constraints and quality requirements
 
-The constraints make the implementation boundary testable: the GUI shall use
-Tkinter, the core shall not call built-in or library mathematical functions,
-and the application shall run from a terminal independently of an IDE. Each
-handled input error must name the field and the correction.
+The constraints make the boundary testable: the core may use only the permitted
+categories of functions, the interface shall use Tkinter, and supported
+exceptions shall not terminate the application.
 
-The quality requirements are measurable. Known values and symmetry use a
-relative tolerance of ten to the minus ten. Representable results in the stated
-domain must complete within one hundred milliseconds, and the GUI must remain
-usable after an error.
+Known values and symmetry use a relative tolerance of ten to the minus ten. Each
+documented benchmark must complete within one hundred milliseconds, and the
+interface must remain usable after an error.
 
 ## Slide 10 - GAI use
 

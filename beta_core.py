@@ -76,7 +76,10 @@ def exponential(value):
     if value > MAX_EXP_ARGUMENT:
         raise NumericRangeError("The result is too large to represent.")
     if value < MIN_EXP_ARGUMENT:
-        raise NumericRangeError("The result is too small to represent.")
+        raise NumericRangeError(
+            "The Beta result is positive but smaller than the minimum nonzero "
+            "Python float, so it cannot be represented."
+        )
 
     reduced = value
     scale = 1.0
@@ -103,7 +106,9 @@ def exponential(value):
 
     result = series_sum * scale
     if result == 0.0 or not is_finite(result):
-        raise NumericRangeError("The result is outside the finite numeric range.")
+        raise NumericRangeError(
+            "The Beta result is outside the nonzero finite Python float range."
+        )
     return result
 
 

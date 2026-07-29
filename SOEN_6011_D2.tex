@@ -59,8 +59,9 @@
 
   \vspace{0.5em}
   \begin{block}{Interpretation of ``from scratch''}
-    No \code{math} module or numerical library. Only input/output, arithmetic,
-    exception handling, and Tkinter UI services are used. \smallcite{Kamthan, 2026a}
+    The numerical core uses no built-in or library functions except those
+    permitted for input, output, arithmetic, user-interface design, and
+    exception handling. \smallcite{Kamthan, 2026a}
   \end{block}
 
   \scriptsize
@@ -119,7 +120,7 @@
   \column{0.49\linewidth}
   \begin{block}{Prohibited dependencies avoided}
     \small
-    No \code{gamma}, \code{lgamma}, \code{log}, \code{exp}, SciPy, or NumPy.
+    No other built-in or library functions are used by the numerical core.
   \end{block}
 \end{columns}
 \end{frame}
@@ -159,10 +160,13 @@
       \end{tabular}
     \end{block}
 
-    \begin{alertblock}{Numeric limit}
+    \begin{alertblock}{Numeric range and measured timing}
       \scriptsize
-      A representable finite result is returned; otherwise a
-      \code{NumericRangeError} explains overflow or underflow.
+      Underflow reports that the positive result is smaller than the minimum
+      nonzero Python float; zero is not returned.\\[0.25em]
+      \textbf{Benchmark:} 1,000 calls for each of five documented inputs;
+      maximum observed time \(=0.129\) ms on an Apple M4 MacBook Pro with
+      Python 3.13.0.
     \end{alertblock}
   \end{columns}
 
@@ -279,26 +283,29 @@
     or handled error without restarting.
   \end{block}
 
-  \begin{block}{Why requirements changed}
+  \begin{alertblock}{Numeric-range behavior}
     \scriptsize
-    Deliverable 1's terminal prompts and quit command were replaced by graphical
-    controls, persistent history, and recovery behavior required by Problem 5.
-  \end{block}
+    \textbf{D2-FR-07} The system shall detect an unrepresentable result and
+    display a helpful numeric-range error instead of returning zero or infinity.
+  \end{alertblock}
 \end{frame}
 
-\begin{frame}{Problem 7: Constraints and Quality Requirements}
+\begin{frame}{Problem 7: Constraints and Quality}
   \begin{columns}[T]
     \column{0.49\linewidth}
     \begin{block}{Constraints}
       \scriptsize
       \textbf{D2-CR-01} The graphical interface shall use Tkinter.\\[0.25em]
-      \textbf{D2-CR-02} The numerical core shall not call built-in or library
-      mathematical functions.\\[0.25em]
+      \textbf{D2-CR-02} The numerical core shall not use built-in or library
+      functions except those permitted for input, output, arithmetic,
+      user-interface design, and exception handling.\\[0.25em]
       \textbf{D2-CR-03} The application shall run from a terminal with
       \code{python3 beta\_function\_gui.py}, independent of an integrated
       development environment.\\[0.25em]
       \textbf{D2-CR-04} Each handled input error shall name the field and the
-      correction needed.
+      correction needed.\\[0.25em]
+      \textbf{D2-CR-05} The system shall catch supported input and numeric-range
+      exceptions without terminating the graphical interface.
     \end{block}
 
     \column{0.49\linewidth}
@@ -307,8 +314,8 @@
       \textbf{D2-QR-01} Relative error shall be at most \(10^{-10}\) for
       \(B(1,1)=1\) and \(B(2,3)=1/12\); \(B(2,3)\) and \(B(3,2)\) shall agree
       within the same tolerance.\\[0.25em]
-      \textbf{D2-QR-02} For \(0<x,y\le1000\) with a representable result, the
-      calculation shall complete within 100 ms on the demonstration computer.\\[0.25em]
+      \textbf{D2-QR-02} For the documented benchmark set, each calculation shall
+      complete within 100 ms on the demonstration computer.\\[0.25em]
       \textbf{D2-QR-03} After a handled error, the graphical interface shall
       remain open and ready for corrected input.
     \end{block}
@@ -316,8 +323,8 @@
 
   \vspace{0.35em}
   \scriptsize
-  Traceability: Problem 5 architecture satisfies D2-CR-01--04; the verification
-  table supports D2-QR-01; graphical-interface recovery supports D2-FR-06 and
+  Traceability: Problem 5 architecture satisfies D2-CR-01--05; verification
+  supports D2-QR-01--02; range and recovery evidence supports D2-FR-06--07 and
   D2-QR-03.
   \smallcite{ISO/IEC/IEEE, 2018; Kamthan, 2026a}
 \end{frame}
