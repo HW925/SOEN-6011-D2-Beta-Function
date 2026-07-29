@@ -66,6 +66,18 @@ Across all 5,000 calls, the maximum observed calculation time was `0.129 ms` on
 an Apple M4 MacBook Pro using Python 3.13.0. The timing harness is verification
 evidence and is not part of the submitted numerical core.
 
+## Reproduce verification
+
+Run the external accuracy and performance checks with:
+
+```bash
+python3 verification.py
+python3 benchmark.py
+```
+
+These scripts are verification evidence only. They are not imported by the
+graphical interface or the submitted numerical core.
+
 ## Repository
 
 Public repository URL:
